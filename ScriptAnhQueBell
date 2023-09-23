@@ -1,0 +1,273 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "AnhQue Hub [Deo Co AutoTaxi Hoac Farm]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Dit Me Thang Que Lai Taxi",
+	Content = "[AnhQue Hub] Da Load Xong...",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+local CreditTab = Window:MakeTab({
+	Name = "TacGia",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+CreditTab:AddLabel("+ Script Do Tao (Do Duc Loc) Lam")
+CreditTab:AddLabel("+ Script Xam Cac Lam Ra Cho Vui")
+CreditTab:AddLabel("+ Script AnhQueHub Co The Farm Dc Vao 1 Ngay Nao Do")
+CreditTab:AddLabel("+ Script Co 6 Chuc Nang Co The Sai")
+CreditTab:AddLabel("+ Ranh Roi Sinh Nong Noi")
+CreditTab:AddLabel("+ DUNG CHIA SE CHO THANG TRAN NGOC MINH")
+local BoostFpsTab = Window:MakeTab({
+	Name = "TangFps",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+BoostFpsTab:AddLabel("Giúp Tăng FPS Từ 30 lên 31 !1!1!1!1!!!")
+BoostFpsTab:AddButton({
+	Name = "BoostFps Manh Bao",
+	Callback = function()
+      		repeat
+    task.wait()
+until game:IsLoaded()
+repeat
+    task.wait()
+until game.Players
+repeat
+    task.wait()
+until game.Players.LocalPlayer
+wait()
+pcall(function()
+	for i,v in next, workspace:GetDescendants() do
+		pcall(function()
+			v.Transparency = 1
+		end)
+	end
+	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+	local g = game
+	local w = g.Workspace
+	local l = g.Lighting
+	local t = w.Terrain
+	sethiddenproperty(l,"Technology",2)
+	sethiddenproperty(t,"Decoration",false)
+	t.WaterWaveSize = 0
+	t.WaterWaveSpeed = 0
+	t.WaterReflectance = 0
+	t.WaterTransparency = 0
+	l.GlobalShadows = 0
+	l.FogEnd = 9e9
+	l.Brightness = 0
+	settings().Rendering.QualityLevel = "Level01"
+	for i, v in pairs(w:GetDescendants()) do
+		if v:IsA("BasePart") and not v:IsA("MeshPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+			v.Enabled = false
+		elseif v:IsA("MeshPart") and decalsyeeted then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+			v.TextureID = 10385902758728957
+		elseif v:IsA("SpecialMesh") and decalsyeeted  then
+			v.TextureId=0
+		elseif v:IsA("ShirtGraphic") and decalsyeeted then
+			v.Graphic=0
+		elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+			v[v.ClassName.."Template"]=0
+		end
+	end
+	for i = 1,#l:GetChildren() do
+		e=l:GetChildren()[i]
+		if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+			e.Enabled = false
+		end
+	end
+	w.DescendantAdded:Connect(function(v)
+		wait()--prevent errors and shit
+		if v:IsA("BasePart") and not v:IsA("MeshPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+			v.Enabled = false
+		elseif v:IsA("MeshPart") and decalsyeeted then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+			v.TextureID = 10385902758728957
+		elseif v:IsA("SpecialMesh") and decalsyeeted then
+			v.TextureId=0
+		elseif v:IsA("ShirtGraphic") and decalsyeeted then
+			v.ShirtGraphic=0
+		elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+			v[v.ClassName.."Template"]=0
+		end
+	end)
+end)
+  	end    
+
+})
+BoostFpsTab:AddButton({
+	Name = "Boot Nhe Nhang",
+	Callback = function()
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+sethiddenproperty(l,"Technology",2)
+sethiddenproperty(t,"Decoration",false)
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+  	end    
+})
+local LockFpsTab = Window:MakeTab({
+	Name = "LockFps",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+LockFpsTab:AddLabel("Khoá FPS Ở Một Con Số Cố Định [Giảm Nóng + Tăng Sự ổn định]")
+LockFpsTab:AddButton({
+	Name = "LockFps At 10",
+	Callback = function()
+      		setfpscap(10)
+  	end    
+})
+LockFpsTab:AddButton({
+	Name = "LockFps At 15",
+	Callback = function()
+      		setfpscap(15)
+  	end    
+})
+LockFpsTab:AddButton({
+	Name = "LockFps At 20",
+	Callback = function()
+      		setfpscap(20)
+  	end    
+})
+local WhiteScreenTab = Window:MakeTab({
+	Name = "WhiteScreen",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+WhiteScreenTab:AddLabel("Giảm Nóng + Farm Tốt Ổn Định + Giảm Lag")
+WhiteScreenTab:AddButton({
+	Name = "WhiteScreen!!!",
+	Callback = function()
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+local WindowFocusReleasedFunction = function()
+	RunService:Set3dRenderingEnabled(false)
+	return
+end
+
+local WindowFocusedFunction = function()
+	RunService:Set3dRenderingEnabled(true)
+	return
+end
+
+local Initialize = function()
+	UserInputService.WindowFocusReleased:Connect(WindowFocusReleasedFunction)
+	UserInputService.WindowFocused:Connect(WindowFocusedFunction)
+	return
+end
+Initialize()
+  	end    
+})
+local ScriptBFHubTab = Window:MakeTab({
+	Name = "ScriptBFHub",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+ScriptBFHubTab:AddLabel("Một Số Script Khá Ngon [Hoặc Không]")
+ScriptBFHubTab:AddButton({
+	Name = "Mukuro Hub",
+	Callback = function()
+      		loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+  	end    
+})
+ScriptBFHubTab:AddButton({
+	Name = "Maru X Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/NinoGod/Free-Script/main/Maru-x-Hub-Free.lua'))()
+  	end    
+})
+ScriptBFHubTab:AddButton({
+	Name = "AdelHub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua"))()
+  	end    
+})
+ScriptBFHubTab:AddButton({
+	Name = "M-Triet Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/MTriet-Hub.lua"))()
+  	end    
+})
+ScriptBFHubTab:AddButton({
+	Name = "Tsuo Hub [Baki Hub]",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/memaybeohub/Function-Scripts/main/YMFHUB_MISC.lua"))()
+  	end    
+})
+ScriptBFHubTab:AddButton({
+	Name = "Night Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/NIGHTHUBONTOP/Main/main/NIGHT-HUB"))()
+  	end    
+})
+local ExploitTab = Window:MakeTab({
+	Name = "Exploit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+ExploitTab:AddLabel("Một Số Executor Tốt Mà Tao Biết")
+ExploitTab:AddLabel("Nên Sử Dụng Fluxus và Krnl")
+ExploitTab:AddLabel("DeltaX : https://deltaexploits.net/")
+ExploitTab:AddLabel("Fluxus : https://fluxteam.net/")
+ExploitTab:AddLabel("KRNL : https://Krnl.place/")
+ExploitTab:AddLabel("Electron : https://Ryos.lol/")
+ExploitTab:AddLabel("Trigon : https://Trigonevo.com/")
+ExploitTab:AddLabel("Update More Soon")
